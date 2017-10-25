@@ -1,11 +1,7 @@
 # Draggable
-A drag library.
+一个简单的拖拽库，参考[Sortable.js](http://github.com/Sortable)
 
-Demo: http://njed.github.io/Draggable
-
-## Feature
-
-### Usage
+### 用法
 ```html
 <ul class="dar">
     <li class="draggable">item1</li>
@@ -25,10 +21,10 @@ Demo: http://njed.github.io/Draggable
  new Draggable(darEl, dorEl, {
      disabled: false,
      handle: null,
-     draggable: /[uo]l/i.test(darEl.nodeName) ? 'li' : '>*', // 可被拖拽的元素
-     filter: null, // 过滤的元素
+     draggable: /[uo]l/i.test(darEl.nodeName) ? 'li' : '>*',
+     filter: null,
      preventOnFilter: true,
-     ignore: 'a, img', // 忽略的标签
+     ignore: 'a, img',
      ghostClass: 'draggable-ghost',
      chosenClass: 'draggable-chosen',
      darClass:'draggable-dar',
@@ -37,21 +33,59 @@ Demo: http://njed.github.io/Draggable
      phClass: 'draggable-ph',
      dataIdAttr: 'data-id',
      direction: 'column',
-     forceFallback: false, // 强制不使用H5拖拽
+     forceFallback: false,
      scrollSensitivity: 30,
      scroll: true,
      scrollSpeed: 10,
+     // Element is chosen
      onChoose: function(evt) {
-         
      },
+     // Element dragging started
      onStart: function(evt) {
-       
      },
+     // Element is moving
      onMove: function(evt) {
-       
      },
+     // Element dragging ended
      onEnd: function(evt) {
-       
      }
  })
 ```
+#### `darEl`
+
+#### `dorEl`
+
+#### `disabled` option
+
+#### `handle` option
+
+#### `draggable` option
+
+#### `filter` option
+
+#### `preventOnFilter` option
+
+#### `ghostClass` option
+
+#### `chosenClass` option
+
+#### `darClass` option
+
+#### `dorClass` option
+
+#### `relClass` option
+
+#### `phClass` option
+
+#### `dataIdAttr` option
+
+#### `direction` option
+
+#### `forceFallback` option
+
+#### `scrollSensitivity` option
+
+#### `scroll` option
+
+#### `scrollSpeed` option
+
