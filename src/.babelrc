@@ -8,5 +8,6 @@
     ]
   ],
   "plugins": ["external-helpers"],
-  "exclude": 'node_modules/**'
+  "ignore": ['node_modules/**'],
+  "babelrc": false
 }

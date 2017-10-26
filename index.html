@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draggable demo</title>
+    <style>
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        ul {
+            max-width: 300px;
+            overflow: hidden;
+        }
+        ul li {
+            list-style: none;
+            padding: 5px;
+            border: 1px solid #00d6b2;
+        }
+        .placeholder {
+            width: 100%;
+            height: 20px;
+            padding: 5px;
+            background-color: #00d6b2;
+        }
+        .ghost {
+            position: fixed;
+            width: 300px;
+            height: 30px;
+            list-style: none;
+            padding: 5px;
+            border: 1px solid #00d6b2;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+<ul class="dar">
+    <li class="draggable">dar-1</li>
+    <li class="draggable">dar-2</li>
+    <li class="draggable">dar-3</li>
+    <li class="draggable">dar-4</li>
+    <li class="draggable">dar-5</li>
+</ul>
+<ul class="dor">
+    <li class="rel">dor-1</li>
+    <li class="rel">dor-2</li>
+    <li class="rel">dor-3</li>
+    <li class="rel">dor-4</li>
+    <li class="rel">dor-5</li>
+</ul>
+<script src="dist/Draggable.iife.js"></script>
+<script>
+    let darEl = document.querySelector('.dar')
+    let dorEl =document.querySelector('.dor')
+    new Draggable(darEl, dorEl, {
+        darClass: 'dar',
+        dorClass: 'dor',
+        draggable: '.draggable',
+        relClass: 'rel',
+        phClass: 'placeholder',
+        ghostClass: 'ghost',
+        forceFallback: true,
+        onEnd: function (evt) {
+            console.log(evt)
+        }
+    })
+</script>
+</body>
+</html>
